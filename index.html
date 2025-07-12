@@ -1,12 +1,82 @@
 <html>
     <head>
-        <title>☁️ ryaninthecloud.uk</title>
+        <link rel="icon" type="image/x-icon" href="./assets/core/favicon.ico">
+        <link
+        rel="stylesheet"
+        href="https://unpkg.com/98.css"
+        >
+        <script src="./script/ritc.js"></script>
+        <title>Ryan Maloney</title>
+        
     </head>
-    <body style="text-align: center;">
-        <h1>☁️ryaninthecloud.uk☁️</h1>
-        <h2>everyone will be relieved to know that i don't write front-end code.</h2>
-        <hr>
-        <h3>this is better... 26/01/24</h3>
-        <p>i've previously spent hours building and maintaining personal sites and actually, i think this is more fun.</p>
+    <body style="">
+        <div class="container" style="width: 70%; margin:0 auto; padding-top: 5%;">
+            <div class="window" role="tabpanel">
+                <div class="title-bar">
+                    <div class="title-bar-text">Ryan Maloney - Digital Internet Ethereal Blogging Solution</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <br>
+                <div class="window-body">
+                    <menu role="tablist">
+                        <li role="tab" id="homeTab" aria-selected="true"><a onclick="showPage('home')">Welcome</a></li>
+                        <li role="tab" aria-selected="false"><a href="https://github.com/ryaninthecloud">My GitHub</a></li>
+                        <li role="tab" id="emailTab" aria-selected="false"><a onclick="showPage('email')">My Email Address</a></li>
+                    </menu>
+                    <div id="emailWindow" class="window" role="tabpanel" hidden>
+                        <div class="window-body">
+                            <div style="padding-left: 5px;">
+                                <ul class="tree-view">
+                                    <li><b>Get in touch with me</b></li>
+                                    <br>
+                                    <li>
+                                        Thanks for looking to email me! Just pop this into a Base64 Decoder of your choice to get my email:
+                                    </li>
+                                    <li>
+                                        aGVsbG8taW50ZXJuZXRAcnlhbmludGhlY2xvdWQudWs=
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="homeWindow" class="window" role="tabpanel" aria-current="true";>
+                        <div class="window-body">
+                            <div style="padding-left: 5px; border-left: 1px solid black;">
+                                <p><b>Hello!</b></p>
+                                <p>You find here my musings on various things. If you want to verify my PGP Key or get in touch, please use the tabs above.</p>                     
+                                <p>Huge credit to the 98.css project that provide the theme I have used to make, what I believe to be, the perfect aesthetic for a website.</p>
+                            </div>
+                            <br>
+                            <div style="padding-left: 5px;">
+                                <p><b>My Latest Post</b></p>
+                                <ul class="tree-view">
+                                    <li><b>New Blog - Released on [12/07/2025]</b></li>
+                                    <br>
+                                    <li>
+                                        I've been toying with the idea of having a space to just send thoughts; to create strings of words; 
+                                        to vaguely document things that I think are interesting. I stumbled across the 98.css project a while 
+                                        ago and have been playing with it ever since. I have thrown this together with the idea that I might
+                                        - at some point - optimise the blog. But, for now, I am happy.
+                                    </li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div style="padding-left: 5px;">
+                                <p><b>My Older Posts</b></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="status-bar">
+                    <p class="status-bar-field">ryaninthecloud.uk</p>
+                    <p class="status-bar-field">Last Updated: 12/07/2025 - 17:52</p>
+                    <p class="status-bar-field">Credits to 98.css</p>
+                </div>
+            </div>
+    
+        </div>
+
     </body>
 </html>
