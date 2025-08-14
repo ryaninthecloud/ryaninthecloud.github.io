@@ -1,0 +1,26 @@
+name: ryaninthecloud.uk LazyBlogBuild
+run-name: ${{ github.actor }} is releasing a new blog post ✉️
+on:
+    push:
+        branches:
+            - 'posts'
+jobs:
+  Release-Blog:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v4
+          name: checkout-blog-post
+          with:
+            ref : posts
+        - uses: actions/setup-python@v5
+          name: install-blog-builder-dependencies
+          with:
+            python-version: '3.13'
+            cache: 'pip' 
+        - run: pip install -r _automation/requirements.txt
+        - name: run-blog-builder
+          run: python _automation/lazyblogbuilder/lazy_blog_builder.py index.html latest_post.html
+        - uses: EndBug/add-and-commit@v9
+          with:
+            add: 'index.html'
+    
