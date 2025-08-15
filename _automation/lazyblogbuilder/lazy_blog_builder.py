@@ -66,7 +66,7 @@ current_latest_post.replace_with(
 archive_post_stack.insert(0, new_archive_post_rendered)
 
 
-with open('new_.html', 'w+') as f:
+with open('index.html', 'w+') as f:
     f.write(
         str(index_content_parser)
         )
