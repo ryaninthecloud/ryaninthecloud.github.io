@@ -3,7 +3,9 @@ run-name: ${{ github.actor }} is releasing a new blog post ✉️
 on:
     push:
         branches:
-            - 'posts'
+            - main
+        tags-ignore:
+            - lazyblogbuilder
 jobs:
   Release-Blog:
     runs-on: ubuntu-latest
@@ -23,4 +25,8 @@ jobs:
         - uses: EndBug/add-and-commit@v9
           with:
             add: 'index.html'
-    
+            message: 'lazyblogbuilder run'
+            committer_name: GitHub Actions
+            committer_email:  actions@github.com
+            push: true
+            tag_push: lazyblogbuilder
